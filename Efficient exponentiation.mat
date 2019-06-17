@@ -1,0 +1,32 @@
+clear all;
+close all;
+clc;
+
+f_count=0;
+for i=1:200
+ 
+d=de2bi(i);
+l=length(d);
+ones=0;
+zeroes=0;
+
+for j=1:l
+ 
+ if(d(j)==1)
+	 ones=ones+1;
+	else
+	 zeroes=zeroes+1;
+	 end
+end
+if(d(1)==1)
+	 count=(ones-1)*2 +(zeroes);
+	else
+	 count=(ones*2)+(zeroes)-2;
+	end
+f_count=f_count+count;
+
+
+% disp(d);
+end
+fprintf('Sum of minimum value is :')
+disp(f_count);
